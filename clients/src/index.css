@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 0%);
+  --foreground: hsl(0, 0%, 100%);
+  --muted: hsl(0, 0%, 10%);
+  --muted-foreground: hsl(0, 0%, 60%);
+  --popover: hsl(0, 0%, 6.7%);
+  --popover-foreground: hsl(0, 0%, 100%);
+  --card: hsl(0, 0%, 10%);
+  --card-foreground: hsl(0, 0%, 100%);
+  --border: hsl(0, 0%, 20%);
+  --input: hsl(0, 0%, 20%);
+  --primary: hsl(120, 100%, 50%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(0, 0%, 10%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(0, 0%, 10%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84.2%, 50%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(120, 100%, 50%);
+  --radius: 0.5rem;
+  
+  /* Custom cyber colors */
+  --cyber-green: hsl(120, 100%, 50%);
+  --threat-red: hsl(0, 100%, 50%);
+  --dark-bg: hsl(0, 0%, 6.7%);
+  --card-bg: hsl(0, 0%, 10%);
+  --warning-yellow: hsl(45, 100%, 50%);
+  --info-blue: hsl(210, 100%, 60%);
+}
+
+.dark {
+  --background: hsl(0, 0%, 0%);
+  --foreground: hsl(0, 0%, 100%);
+  --muted: hsl(0, 0%, 10%);
+  --muted-foreground: hsl(0, 0%, 60%);
+  --popover: hsl(0, 0%, 6.7%);
+  --popover-foreground: hsl(0, 0%, 100%);
+  --card: hsl(0, 0%, 10%);
+  --card-foreground: hsl(0, 0%, 100%);
+  --border: hsl(0, 0%, 20%);
+  --input: hsl(0, 0%, 20%);
+  --primary: hsl(120, 100%, 50%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(0, 0%, 10%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(0, 0%, 10%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84.2%, 50%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(120, 100%, 50%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-inter antialiased bg-black text-white;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-cyber-green {
+    color: var(--cyber-green);
+  }
+  
+  .text-threat-red {
+    color: var(--threat-red);
+  }
+  
+  .text-warning-yellow {
+    color: var(--warning-yellow);
+  }
+  
+  .text-info-blue {
+    color: var(--info-blue);
+  }
+  
+  .bg-cyber-green {
+    background-color: var(--cyber-green);
+  }
+  
+  .bg-threat-red {
+    background-color: var(--threat-red);
+  }
+  
+  .bg-dark-bg {
+    background-color: var(--dark-bg);
+  }
+  
+  .bg-card-bg {
+    background-color: var(--card-bg);
+  }
+  
+  .border-cyber-green {
+    border-color: var(--cyber-green);
+  }
+  
+  .hover\:text-cyber-green:hover {
+    color: var(--cyber-green);
+  }
+  
+  .hover\:bg-cyber-green:hover {
+    background-color: var(--cyber-green);
+  }
+  
+  .hover\:border-cyber-green:hover {
+    border-color: var(--cyber-green);
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .gradient-text {
+    background: linear-gradient(to right, #ffffff, #9ca3af);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
